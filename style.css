@@ -1,0 +1,134 @@
+:root {
+    --full: white;
+    --empty: #6c757d;
+    --selected: #fcc41c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #343a40;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.cinema-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    box-shadow: 0px 3px 10px #fff;
+    margin-bottom: 20px;
+}
+
+.screen img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.seats {
+    margin-top: 4%;
+    margin-bottom: 15%;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+
+#seat-2 {
+    margin-right: 20px;
+}
+
+#seat-6 {
+    margin-right: 20px;
+}
+
+.seats button {
+    width: 25px;
+    height: 25px;
+    background-color: #6c757d;
+    background: var(--empty);
+    border-radius: 5px;
+    border: none;
+    transition: all 0.1s ease;
+    text-align: center;
+    color: black;
+}
+
+.seats button:hover {
+    transform: scale(1.2);
+    box-shadow: 3px 2px 22px 1px var(--empty);
+}
+
+.seats button:active {
+    transition: none;
+    transform: scale(1);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+select {
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.text {
+    color: white;
+}
+
+.text span {
+    color: var(--selected);
+}
+
+.info {
+    width: 300px;
+    height: 50px;
+    margin-bottom: 40px;
+    background-color: #212529;
+    color: var(--empty);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    margin: 8px;
+}
+
+.box span {
+    margin-left: 30px;
+}
+
+.selected {
+    background-color: var(--selected);
+}
+
+.empty {
+    background-color: var(--empty);
+}
+
+.full {
+    background-color: var(--full);
+}
